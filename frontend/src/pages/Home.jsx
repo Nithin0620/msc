@@ -38,7 +38,7 @@ const Home = () => {
       getAnnouncements(token);
     };
     fetchAnnouncements();
-  }, []);
+  }, [getToken,getAnnouncements]);
 
   // console.log("token:",token)
 

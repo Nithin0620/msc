@@ -12,7 +12,7 @@ const SignInPage = () => {
     }
   }, [isSignedIn, user, setIsAuthenticated]);
 
-  const cardBg = darkInStore ? "bg-black text-white" : "bg-white text-black";
+  // const cardBg = darkInStore ? "bg-black text-white" : "bg-white text-black";
   const cardBorder = darkInStore ? "border-zinc-700" : "border-border";
 
   return (
