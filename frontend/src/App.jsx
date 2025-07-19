@@ -19,7 +19,7 @@ export default function App() {
         setIsAuthenticated(true);
         try {
           const token = await getToken();
-          console.log("token:",token)
+          // console.log("token:",token)
           getAnnouncements(token); 
         } catch (error) {
           console.error("Error getting token:", error);
