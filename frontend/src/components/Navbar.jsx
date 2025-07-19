@@ -1,8 +1,8 @@
 import { useUser, SignedIn, SignedOut, SignOutButton } from "@clerk/clerk-react";
 import { useEffect } from "react";
-import { FaUserAlt } from "react-icons/fa";
+// import { FaUser } from "react-icons/fa";
 import { useAnnouncementStore } from "../store/Announcement";
-import { MoonIcon, SunIcon } from "lucide-react";
+import { MoonIcon, SunIcon,User  } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
@@ -62,7 +62,7 @@ const Navbar = () => {
                 <div className={`p-1 rounded-full ${
                   darkInStore ? "bg-gray-700" : "bg-gray-200"
                 }`}>
-                  <FaUserAlt size={14} />
+                  <User  size={14} />
                 </div>
                 <span className="font-medium text-sm">
                   {user?.fullName || user?.firstName || "User"}
