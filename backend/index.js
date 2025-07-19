@@ -15,7 +15,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use("/api/announcements",anouncementApi);
 
-app.use(express.static(path.join(__dirname, '../frontend/dist')));
+app.use(express.static(path.join(__dirname, '../frontend/build')));
 
 
 
@@ -28,5 +28,5 @@ app.get("/" , (req,res)=>{
 })
 
 app.get(/^\/(?!api).*/, (req, res) => {
-  res.sendFile(path.join(__dirname, "../frontend", "dist", "index.html"));
+  res.sendFile(path.join(__dirname, "../frontend", "build", "index.html"));
 });
