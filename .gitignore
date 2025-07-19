@@ -32,3 +32,4 @@ node_modules
 /backend/.env
 /frontend/.env
 .env
+\backend\msc-announcement-s-firebase-adminsdk-fbsvc-5c89086205.json
