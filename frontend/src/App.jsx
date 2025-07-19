@@ -4,6 +4,7 @@ import { useUser } from "@clerk/clerk-react";
 
 import Home from "./pages/Home";
 import SignInPage from "./pages/SignInPage";
+import SignUpPage from "./pages/SignUpPage";
 import Navbar from "./components/Navbar";
 import { useEffect } from "react";
 import { useAnnouncementStore } from "./store/Announcement";
@@ -19,7 +20,7 @@ export default function App() {
         setIsAuthenticated(true);
         try {
           const token = await getToken();
-          // console.log("token:",token)
+          console.log("token:",token)
           getAnnouncements(token); 
         } catch (error) {
           console.error("Error getting token:", error);
@@ -50,6 +51,14 @@ export default function App() {
           element={
             <SignedOut>
               <SignInPage />
+            </SignedOut>
+          } 
+        />
+        <Route 
+          path="/sign-up" 
+          element={
+            <SignedOut>
+              <SignUpPage />
             </SignedOut>
           } 
         />

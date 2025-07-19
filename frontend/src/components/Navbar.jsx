@@ -29,7 +29,7 @@ const Navbar = () => {
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 ${navBg} border-b shadow-lg transition-all duration-300`}>
       <div className="flex justify-between items-center p-4 max-w-7xl mx-auto">
-        <div className={`text-xl font-bold ${textColor} flex items-center`}>
+        <div onClick={()=>navigate("/")} className={`text-xl font-bold ${textColor} flex cursor-pointer items-center`}>
           <img 
             src="./logo.png" 
             alt="logo" 

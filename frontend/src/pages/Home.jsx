@@ -61,6 +61,7 @@ const Home = () => {
           token:token,
         });
       }
+      getAnnouncements(token);
       closePostModal();
     } catch (error) {
       console.error("Error submitting form:", error);
@@ -74,6 +75,7 @@ const Home = () => {
     try {
       const token = await getToken();
       await deleteAnnouncement(currentAnnouncement.id,token);
+      getAnnouncements(token)
       closeDeleteModal();
     } catch (error) {
       console.error("Error deleting announcement:", error);
